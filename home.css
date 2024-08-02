@@ -1,0 +1,179 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: #c1c1c1;
+}
+
+/* 그리드 스타일 */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 왼쪽 패널과 오른쪽 패널을 나란히 배치 */
+    gap: 20px; /* 아이템 사이의 간격 */
+    padding: 20px;
+}
+
+.left-panel,
+.right-panel {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.left-panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-panel {
+    display: flex;
+}
+
+.right-panel h3 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.study-time {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    margin-top: 0; /* 공부 시간을 조금 위로 올립니다. */
+}
+
+#stopwatch {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.study-time button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px; /* 버튼 사이의 간격 조정 */
+    margin-left: 5px;
+    padding: 7px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #a0e9a0;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.study-time button:hover {
+    background-color: #096c16;
+    color: white;
+}
+
+.left-panel h2 {
+    text-align: center;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 달력 스타일 */
+#calendar-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 전체 달력 컨테이너 스타일 */
+#calendar-container {
+    margin-top: 20px;
+}
+
+/* 달력 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 달력 테이블의 날짜 셀 스타일 */
+td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* 이전 달의 날짜 셀 스타일 */
+.prev-month {
+    color: #bbb;
+}
+
+/* 날짜 셀 호버 스타일 */
+td:hover {
+    background-color: #f2f2f2;
+    /* cursor: pointer; */
+}
+
+.current-date {
+    border: 2px solid black; /* 테두리 스타일 및 색상을 설정합니다. */
+}
+
+/* 프로필 이미지 크기 조정 */
+.profile img {
+    width: 200px; /* 원하는 너비로 조정 */
+    height: 200px; /* 원하는 높이로 조정 */
+    object-fit: cover; /* 이미지를 잘라내지 않고 비율을 유지하면서 크기 조정 */
+    border-radius: 50%; /* 원형으로 만들기 위해 둥근 테두리 적용 */
+    border: 2px black solid;
+}
+
+#inform {
+    width: 200px; /* 원하는 너비로 조정 */
+    height: 200px; /* 원하는 높이로 조정 */
+    font-weight: bold;
+    text-align: center;
+    display: flex; /* 요소를 수평으로 배치하기 위해 flex 사용 */
+    align-items: center; /* 수직 정렬을 위해 center로 설정 */
+    justify-content: center; /* 수평 정렬을 위해 center로 설정 */
+}
+
+/* #informp {
+    font-size: 18px;
+} */

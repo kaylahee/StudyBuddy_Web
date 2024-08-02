@@ -1,0 +1,225 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: #c1c1c1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left {
+    width: 50%;
+    border: #333 solid 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.right {
+    width: 50%;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+#progress {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(red 0%, white 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside-circle {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #333;
+}
+
+.timer-inputs {
+    margin-top: 20px;
+}
+
+.timer-inputs input {
+    text-align: center;
+    margin: 0 10px; /* 좀 더 넓은 여백을 줍니다. */
+    font-size: 16px; /* 폰트 크기를 조정합니다. */
+    padding: 5px; /* 내부 여백을 추가합니다. */
+    border-radius: 5px; /* 테두리를 둥글게 만듭니다. */
+    border: 1px solid #ccc; /* 테두리 스타일을 설정합니다. */
+}
+
+.timer-inputs input[type="number"] {
+    width: 50px; /* 입력 필드의 너비를 조정합니다. */
+}
+
+.remaining-time {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.timer-buttons {
+    margin-top: 20px;
+}
+
+.timer-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.music {
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-left: 30px; /* 왼쪽 여백을 자동으로 설정하여 오른쪽으로 이동합니다. */
+}
+
+.music-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px; /* 각 음악 항목 사이의 간격 설정 */
+}
+.music-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 이미지를 동그랗게 만듭니다. */
+    border: 2px solid #999; /* 테두리를 추가합니다. */
+    padding: 10px; /* 내부 여백을 줍니다. */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.music-selection {
+    border-radius: 8px; /* 모서리를 둥글게 만듭니다. */
+    background-color: #f9f9f9; /* 배경색을 변경합니다. */
+    padding: 35px; /* 패딩을 줄입니다. */
+    padding-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과를 추가합니다. */
+}
+
+.music-selection h3 {
+    margin-top: 0;
+}
+
+.music-selection select {
+    margin-right: 10px;
+}
+
+.music-selection button {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.music-selection button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* 버튼을 확대합니다. */
+}
+
+.music-selection button:active {
+    transform: scale(0.95); /* 버튼을 축소합니다. */
+}
+
+/* 사용자 정의 창 스타일 */
+.custom-alert {
+    display: none; /* 초기에는 숨깁니다. */
+    position: fixed; /* 고정 위치 */
+    z-index: 1; /* 다른 요소 위에 표시됩니다. */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* 반투명한 배경 */
+  }
+  
+  /* 사용자 정의 창 내용 */
+  .alert-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 중앙 정렬 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* 사용자 정의 창 닫기 버튼 스타일 */
+  .close-alert {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-alert:hover,
+  .close-alert:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* 전체 너비의 90%로 설정 */
+    max-width: 400px;
+    margin: auto; /* 수평 가운데 정렬 */
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.signup-form .form {
+    margin-bottom: 15px; /* 폼 요소 간의 간격을 늘림 */
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-form .col2 {
+    float: left;
+}
+
+.signup-form .col3 {
+    /* margin-top: 10px; */
+    text-align: center;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    width: 100%; /* 입력 필드 너비 조정 */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.signup-form .form.email {
+    display: flex;
+    flex-direction: column; /* 아래로 정렬 */
+    margin-bottom: 0;
+}
+
+.signup-form input[type="text"][name="email1"] {
+    width: calc(50% - 65px); /* 이메일 입력 필드 너비를 조정 */
+    margin-right: 10px;
+}
+.signup-form input[type="text"][name="email2"] {
+    width: calc(50% - 65px); /* 이메일 입력 필드 너비를 조정 */
+    margin-left: 10px;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="password"]:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* 버튼 아래 여백을 조정 */
+}
+
+.signup-form button:hover {
+    background-color: #000000;
+}
+
+.signup-form p {
+    text-align: center;
+    margin-top: 20px; /* 문단 상단 여백을 조정 */
+    margin-bottom: 0; /* 문단 하단 여백을 없앰 */
+}
+
+.signup-form a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.signup-form a:hover {
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
