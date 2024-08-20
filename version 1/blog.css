@@ -1,0 +1,327 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: #c1c1c1;
+}
+
+.main-content {
+    display: flex;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.container {
+    flex-grow: 1;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="date"],
+textarea,
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+button[type="button"] {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+button[type="button"]:hover {
+    background-color: #555;
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* 피드백 섹션 */
+#feedback-list {
+    list-style: none;
+    padding: 0;
+}
+
+#feedback-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.feedback-date {
+    font-weight: bold;
+    color: #333;
+}
+
+.weather-buttons {
+    display: inline-flex; /* 가로로 배치하기 위해 inline-flex 설정 */
+    align-items: center; /* 세로 중앙에 정렬 */
+    margin-left: 10px; /* 날짜 입력 필드와의 간격을 조절합니다. */
+}
+
+.feedback-weather {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    /* border-radius: 50%; */
+    background-color: rgb(177, 231, 133);
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.feedback-emotion {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(126, 175, 231);
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.feedback-content {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #0056b3; /* 더 짙은 파란색 */
+}
+
+/* 모달 스타일 추가 */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    font-size: 10pt;
+    position: relative; /* 상대 위치 지정 */
+}
+
+.modal label[for="date"] {
+    margin-bottom: 5px; /* 날짜 입력 필드와의 간격 설정 */
+}
+
+.modal .weather-buttons {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    padding-bottom: 10px; /* 하단 여백 설정 */
+    margin-left: 0; /* 왼쪽 여백 제거 */
+}
+
+.modal .weather-button {
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal .weather-button:hover {
+    background-color: #e0e0e0;
+}
+
+.modal .weather-button.selected {
+    background-color: #b3e5fc;
+    border-color: #03a9f4;
+}
+
+/* 닫기 버튼 스타일 수정 */
+.modal .close-btn {
+    color: black;
+    position: absolute;
+    top: 7px;
+    right: 7px; /* 오른쪽에 위치 */
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+/* 감정 버튼 스타일 */
+.emotion-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.emotion-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.emotion-button:hover {
+    background-color: #e0e0e0;
+}
+
+.emotion-button.selected {
+    background-color: #b3e5fc; /* 선택된 버튼의 배경색 */
+    border-color: #03a9f4; /* 선택된 버튼의 테두리 색 */
+}
+
+/* 기존 스타일 유지하면서 날짜 입력 필드와 날씨 선택 버튼을 옆으로 표시 */
+#date {
+    display: inline-block; /* 날짜 입력 필드를 인라인 블록 요소로 변경하여 옆으로 표시 */
+    vertical-align: middle; /* 날짜 입력 필드를 세로 중앙에 정렬 */
+}
+
+/* 스타일 추가 */
+.weather-buttons {
+    display: inline-flex; /* 가로로 배치하기 위해 inline-flex 설정 */
+    align-items: center; /* 세로 중앙에 정렬 */
+    margin-left: 200px; /* 일기 작성 콘테이너와의 간격을 조절합니다. */
+}
+
+.weather-button {
+    margin-right: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+    background-color: #e0e0e0;
+}
+
+.weather-button.selected {
+    background-color: #b3e5fc; /* 선택된 버튼의 배경색 */
+    border-color: #03a9f4; /* 선택된 버튼의 테두리 색 */
+}

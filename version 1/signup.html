@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="signup.js"></script>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <form name="member_form" method="post" action="signup.php">
+			    <h2>회원 가입</h2>
+                    <div class="form">
+                    <label>이름:</label>
+                    <div class="col2"><input type="text" name="name"></div>                 
+                    </div>
+                    <div class="clear"></div>
+                    <div class="form email">
+                    <label>이메일:</label>
+                    <div class="col2"><input type="text" name="email1">@<input type="text" name="email2"></div>                 
+                    </div>
+                    <div class="clear"></div>
+			       	<div class="form">
+				        <label>비밀번호:</label>
+				        <div class="col2"><input type="password" name="pass"></div>                 
+			       	</div>
+			       	<div class="clear"></div>
+			       	<div class="form">
+				        <label>비밀번호 확인:</label>
+				        <div class="col2"><input type="password" name="pass_confirm"></div>                 
+			       	</div>
+			       	<div class="clear"></div>
+			       	<div class="bottom_line"> </div>
+			       	<div class="buttons">
+                        <button type="button" onclick="check_input()">회원가입</button>
+                        <button type="button" onclick="reset_form()">초기화</button>
+                    </div>
+           	</form>
+            <p>이미 회원이신가요? <a href="login.html">로그인</a></p>
+        </div>
+    </div>
+</body>
+</html>
